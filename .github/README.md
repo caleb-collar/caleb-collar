@@ -1,9 +1,10 @@
 <h4 align="center"><samp> Hi there, 👋 welcome to my Github profile! 👀</samp></h4>
 <br>
-<h4 align="center"><samp> I have a passion for the confluence of software, hardware, and biology. I believe that we can create a better future for humanity by being intentional with our decisions(large and small) and by being purposeful with what we build. <br>I am a tree and forest enthusiast 🌲. I love my family.</samp></h4>
+<h4 align="center"><samp> I have a passion for the confluence of software, hardware, and biology. I believe that we can create a better future for humanity by being intentional with our decisions(large and small) and by being purposeful with what we build. <br> I am a tree and forest enthusiast 🌲. I love my family.</samp></h4>
 <h4 align="center"><samp>View my <a href="">curriculum vitae.</a></samp></h4>
+<br>
 <p align="center">
-  <img width="250" src="">
+  <img width="250" src="https://github.com/Mindstormer-0/Mindstormer-0/blob/main/images/SmallEarth.jpg?raw=true">
 </p>
 <br>
 <p align="center"><samp>
