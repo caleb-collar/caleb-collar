@@ -1,49 +1,3 @@
-<svg fill="none" viewBox="0 0 300 120" width="300" height="120" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-
-      <style>
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-          height: 100%;
-          width: 100%;
-        }
-        .tag {
-          background-color: #E3FFFF;
-          border-radius: 0.25em;
-          color: #0ca4a5;
-          border: 1px solid #0ca4a5;
-          display: inline-block;
-          font-size: 0.75em;
-          line-height: 2em;
-          margin: 0.125em;
-          padding: 0 0.5em;
-          text-decoration: none;
-          font-family: sans-serif;
-        }
-      </style>
-
-      <div class="tags">
-        <div class="tag">Angular</div>
-        <div class="tag">Vue(X)</div>
-        <div class="tag">JavaScript</div>
-        <div class="tag">TypeScript</div>
-      </div>
-      <div class="tags">
-        <div class="tag">(S)CSS</div>
-        <div class="tag">Building UIs</div>
-        <div class="tag">Web Components</div>
-      </div>
-      <div class="tags">
-        <div class="tag">Ionic</div>
-        <div class="tag">Electron</div>
-        <div class="tag">.NET</div>
-      </div>
-
-    </div>
-  </foreignObject>
-</svg>
 <h4 align="center"><samp> Hi there, 👋 welcome to my Github profile!</samp></h4>
 <br>
 <h4 align="center"><samp> I have a passion for the confluence of software, hardware, and biology. I believe that we can create a better future for humanity by being intentional with our decisions; (both large and small) and by being purposeful with what we build.</samp></h4>
@@ -71,7 +25,6 @@ Check out my repos ⬇️
   </samp>
 </p>
 <br>
-</html>
 
 ![visitor_badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=Mindstormer-0.Mindstormer-0&style=for-the-badge&color=c34a00&lcolor=3f352b&text=Visitors_🤠)
 
