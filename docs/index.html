@@ -39,10 +39,6 @@
       animation: energy 0.01s ease-in-out infinite alternate;
     }
 
-    .pad {
-      padding: 15;
-    }
-
     .container {
       display: flex;
       justify-content: right;
@@ -104,10 +100,8 @@
     }
 
     .click:checked~.bg {
-      transform: scale(200);
       background-color: #000000;
       transition: transform .6s, background-color .3s;
-      z-index: -2;
     }
 
     .click~.bg {
@@ -402,7 +396,7 @@
       <div class="button-small"></div>
     </label>
     <div class="button-small-logo"></div>
-    <div class="bg"></div>
+    <div id="circleBg" class="bg"></div>
   </div>
 </div>
 <br>
