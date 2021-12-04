@@ -1,4 +1,4 @@
-//Starfield effect for full webpage | Caleb C.
+//Starfield effect for full webpage. | Caleb C.
 
 //Globals
 const canvas = document.getElementById('starField');
@@ -8,40 +8,51 @@ var body = document.body, html = document.documentElement;
 var y = window.scrollY - 2346;
 var hyperIO = false;
 var updated = true;
+var drawing = false;
+let speed = 0.04;
+let stars = [];
+
+//Get initial dimensions.
+adjustSize();
 
 //Hyper button.
-document.getElementById("hyperButton").addEventListener("click", function () {
-  hyperIO ^= true;
+document.getElementById("hyperButton").addEventListener("click", function (e) {
   var element, elements;
+  hyperIO ^= true;
+  if (!drawing) {
+    draw();
+    drawing = true;
+  }
   if (hyperIO) {
-    element = document.getElementById("starField");
-    element.classList.add("reveal");
     element = document.getElementById("contentPane");
     element.classList.add("darkBorder");
-    element.classList.add("hyper");
     elements = document.getElementsByTagName("blockquote");
     for (var i = 0; i < elements.length; i++) {
       elements[i].classList.add("darkBorder");
     }
-  } else {
+    setTimeout(() => {
+      if (hyperIO) {
+        element = document.getElementById("starField");
+        element.classList.add("reveal");
+        element = document.getElementById("contentPane");
+        element.classList.add("hyper");
+      }
+      adjustSize();
+    }, 500);
+  }
+  if (!hyperIO) {
+    element = document.getElementById("starField");
+    element.classList.remove("reveal");
+    element = document.getElementById("contentPane");
+    element.classList.remove("hyper");
+    element.classList.remove("darkBorder");
     elements = document.getElementsByTagName("blockquote");
     for (var i = 0; i < elements.length; i++) {
       elements[i].classList.remove("darkBorder");
     }
-    element = document.getElementById("contentPane");
-    element.classList.remove("hyper");
-    element.classList.remove("darkBorder");
-    element = document.getElementById("starField");
-    element.classList.remove("reveal");
+    drawing = false;
   }
 });
-
-//Initial dimensions.
-var width = window.innerWidth;
-var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-height += 815; //padding
-canvas.width = width;
-canvas.height = height;
 
 //On window scroll color and speed changes.
 window.addEventListener('scroll', (event) => {
@@ -85,7 +96,7 @@ class Star {
     }
   }
 
-  //draws line from x,y to px,py
+  //Draw star path.
   show() {
     c.lineWidth = this.z;
     c.beginPath();
@@ -96,16 +107,13 @@ class Star {
   }
 }
 
-let speed = 0.04;
-let stars = [];
-
 //Create stars.
 for (let i = 0; i < NUM_STARS; i++) stars.push(new Star());
 c.fillStyle = 'rgba(0, 0, 0, 0.1)';
 c.strokeStyle = 'rgb(255,255,255)';
 var currentStroke = c.strokeStyle;
 
-c.translate(canvas.width / 2, canvas.height / 2);
+//c.translate(canvas.width / 2, canvas.height / 2);
 
 //Draw background and stars method.
 function draw() {
@@ -114,18 +122,22 @@ function draw() {
     s.update();
     s.show();
   }
-  requestAnimationFrame(draw);
+  if (!hyperIO) {
+    cancelAnimationFrame(draw);
+  } else {
+    requestAnimationFrame(draw);
+  }
 }
 
-//Resize event.
-var onresize = function (e) {
-  canvas.width = e.target.outerWidth;
-  canvas.height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+//Check canvas size against document size.
+function adjustSize() {
+  canvas.width = window.innerWidth;
+  canvas.height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight) + 175;
   c.translate(canvas.width / 2, canvas.height / 2);
   c.strokeStyle = currentStroke;
 }
-window.addEventListener("resize", onresize);
-//window.dispatchEvent(new Event('resize'));
 
-//Start starfield.
-draw();
+//Resize event.
+window.addEventListener("resize", function (e) {
+  adjustSize();
+});

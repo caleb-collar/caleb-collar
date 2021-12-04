@@ -14,9 +14,9 @@
       z-index: -1;
     }
 
-    #hyperButton {
-      padding-right: 150px;
-      float: right;
+    #contentPane {
+      border-radius: 25px;
+      padding: 20px;
     }
 
     .imageContainer>img:hover {
@@ -32,13 +32,104 @@
       color: #FFFFFF;
       border-radius: 25px;
       background-color: rgba(29, 30, 34, 0.9);
-      padding: 20px;
       transition: all 0.75s ease;
     }
 
     .hyper {
-
       animation: energy 0.01s ease-in-out infinite alternate;
+    }
+
+    .pad {
+      padding: 15;
+    }
+
+    .container {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      width: 95%;
+      position: relative;
+    }
+
+    .button-big {
+      width: 25px;
+      height: 50px;
+      border-radius: 50px;
+      background-image: linear-gradient(to right bottom, #F2F2F2, #e0e0e0);
+      position: relative;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, .2),
+        inset 2px 4px 4px rgba(255, 255, 255, .4);
+    }
+
+    .button-small {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-52%, -50%);
+      width: 80%;
+      height: 80%;
+      border-radius: 50px;
+      box-shadow: inset 2px 4px 4px -2px rgba(255, 255, 255, .6),
+        0px 4px 4px rgba(0, 0, 0, .2);
+      background-image: linear-gradient(to right bottom, #F2F2F2, #e0e0e0);
+    }
+
+    .button-small-logo {
+      pointer-events: none;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-52%, -50%);
+      width: 87%;
+      height: 46%;
+    }
+
+    .click {
+      display: none;
+    }
+
+    .click:checked+label .button-small {
+      background-image: linear-gradient(to right bottom, #e0e0e0, #F2F2F2);
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .1),
+        inset -2px -2px 4px rgba(255, 255, 255, .4);
+    }
+
+    .click:checked+label .button-big {
+      box-shadow: 0px 0px 70px rgba(255, 255, 255, 0.5),
+        inset 2px 4px 4px rgba(255, 255, 255, .4);
+    }
+
+    .click:checked~.bg {
+      transform: scale(200);
+      background-color: #000000;
+      transition: transform .6s, background-color .3s;
+      z-index: -2;
+    }
+
+    .click~.bg {
+      transition: transform .3s, background-color 5s;
+    }
+
+    .glow {
+      -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+      filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+      z-index: -2;
+    }
+
+    .bg {
+      pointer-events: none;
+      width: 20px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: -2;
     }
 
     @keyframes energy {
@@ -296,17 +387,26 @@
   </div>
 </body>
 
-<p align="center">
-  <a href="https://github.com/Mindstormer-0"><img width="35"
-      src="https://img.icons8.com/ios-filled/100/000000/github.png" /></a>
-  <a href="https://twitter.com/caleb_collar"><img width="35"
-      src="https://img.icons8.com/android/100/000000/twitter.png" /></a>
-  <a href="https://dev.to/mindstormer"><img width="35" src="https://img.icons8.com/windows/100/000000/dev.png" /></a>
-</p>
-<p id="hyperButton">
-  <img width="35"
-    src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-rocket-business-kiranshastry-gradient-kiranshastry.png" />
-</p>
+<div align="center">
+  <a href="https://github.com/Mindstormer-0"><img class="glow" width="35"
+      src="https://img.icons8.com/ios-filled/100/000000/github.png"></a>
+  <a href="https://twitter.com/caleb_collar"><img class="glow" width="35"
+      src="https://img.icons8.com/android/100/000000/twitter.png"></a>
+  <a href="https://dev.to/mindstormer"><img class="glow" width="35"
+      src="https://img.icons8.com/windows/100/000000/dev.png"></a>
+</div>
+<div class="container">
+  <div class="button-big">
+    <input type="checkbox" id="checked" class="click">
+    <label id="hyperButton" for="checked">
+      <div class="button-small"></div>
+    </label>
+    <div class="button-small-logo"></div>
+    <div class="bg"></div>
+  </div>
+</div>
+<br>
+
 <script src="./script.js"></script>
 
 </html>
