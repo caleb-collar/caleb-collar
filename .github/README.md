@@ -9,7 +9,7 @@
 <br>
 <br>
 <p align="center"><samp>
-If you've found any of my work useful, you can <a href="https://www.buymeacoffee.com/CalebACollar">buy a coffee ☕️</a> or <a href="https://github.com/Mindstormer-0/Mindstormer-0">give a star ✨</a>
+If you've found any of my work useful and would like to support it, you can <a href="https://www.buymeacoffee.com/CalebACollar">buy a coffee ☕️</a> or <a href="https://github.com/Mindstormer-0/Mindstormer-0">give a star ✨</a>
   </samp>
 </p>
 <br>
