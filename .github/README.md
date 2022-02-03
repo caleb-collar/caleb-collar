@@ -20,6 +20,9 @@ If you've found any of my work useful and would like to support it, you can <a h
 <a href= "https://give.catf.us/give/329616/#!/donation/checkout"><img width="35" src="https://img.icons8.com/ios-glyphs/30/000000/planet.png"/></a>
 </p>
 <br>
+<p align="center">
+<img src="https://readme-jokes.vercel.app/api?hideBorder" alt="Jokes Card" />
+</p>
 <p align="center"><samp>
 Check out my repos ⬇️  
   </samp>
