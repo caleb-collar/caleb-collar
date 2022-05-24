@@ -4,7 +4,7 @@
 const canvas = document.getElementById('starField');
 const c = canvas.getContext('2d');
 const NUM_STARS = 1450;
-const CANVAS_PAD = 5790;
+const CANVAS_PAD = 5850;
 var body = document.body, html = document.documentElement;
 var y = window.scrollY - 2346;
 var currentStroke = c.strokeStyle;
