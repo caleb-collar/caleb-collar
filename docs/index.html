@@ -2,431 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caleb Collar | CV</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-  <style>
-    canvas {
-      visibility: hidden;
-      position: -webkit-sticky;
-      position: absolute;
-      z-index: -1;
-      content-visibility: auto;
-      contain-intrinsic-size: 1px 5000px;
-    }
+  <meta charset="UTF-8">
+  <title>Develop With Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:700'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+  <link rel="stylesheet" href="./style.css">
 
-    #contentPane {
-      border-radius: 25px;
-      padding: 20px;
-    }
-
-    .imageContainer>img:hover {
-      transform: scale(1.5);
-      transition: transform 1s;
-    }
-
-    .reveal {
-      visibility: visible;
-    }
-
-    .darkBorder {
-      color: #FFFFFF;
-      border-radius: 25px;
-      background-color: rgba(29, 30, 34, 0.9);
-      transition: all 0.75s ease;
-    }
-
-    .hyper {
-      animation: energy 0.01s ease-in-out infinite alternate;
-    }
-
-    .container {
-      display: flex;
-      justify-content: right;
-      align-items: center;
-      width: 95%;
-      position: relative;
-    }
-
-    .button-big {
-      width: 25px;
-      height: 50px;
-      border-radius: 50px;
-      background-image: linear-gradient(to right bottom, #F2F2F2, #e0e0e0);
-      position: relative;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, .2),
-        inset 2px 4px 4px rgba(255, 255, 255, .4);
-    }
-
-    .button-small {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-52%, -50%);
-      width: 80%;
-      height: 80%;
-      border-radius: 50px;
-      box-shadow: inset 2px 4px 4px -2px rgba(255, 255, 255, .6),
-        0px 4px 4px rgba(0, 0, 0, .2);
-      background-image: linear-gradient(to right bottom, #F2F2F2, #e0e0e0);
-    }
-
-    .button-small-logo {
-      pointer-events: none;
-      background-image: url("");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-52%, -50%);
-      width: 87%;
-      height: 46%;
-    }
-
-    .click {
-      display: none;
-    }
-
-    .click:checked+label .button-small {
-      background-image: linear-gradient(to right bottom, #e0e0e0, #F2F2F2);
-      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .1),
-        inset -2px -2px 4px rgba(255, 255, 255, .4);
-    }
-
-    .click:checked+label .button-big {
-      box-shadow: 0px 0px 70px rgba(255, 255, 255, 0.5),
-        inset 2px 4px 4px rgba(255, 255, 255, .4);
-    }
-
-    .click:checked~.bg {
-      background-color: #000000;
-      transition: transform .6s, background-color .3s;
-    }
-
-    .click~.bg {
-      transition: transform .3s, background-color 5s;
-    }
-
-    .glow {
-      -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
-      filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
-      z-index: -2;
-    }
-
-    .bg {
-      pointer-events: none;
-      width: 20px;
-      height: 25px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      z-index: -2;
-    }
-
-    @keyframes energy {
-      from {
-        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
-          0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-      }
-
-      to {
-        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
-          0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
-      }
-    }
-  </style>
 </head>
 
-<canvas id="starField"></canvas>
-
-<body class="stackedit">
-  <br>
-  <div class="stackedit__html" id="contentPane">
-    <h1 align="center" id="curriculum-vitae">Curriculum Vitae</h1>
-    <div align="center" class="imageContainer">
-      <img src="https://github.com/Mindstormer-0/Mindstormer-0/blob/main/images/calebAcollar.png?raw=true"
-        alt="pic_of_caleb" width="256" height="256">
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="wrapper">
+    <canvas id="stars"></canvas>
+    <canvas id="caleb"></canvas>
+    <div class="container">
+      <div class="template color-yellow" data-template="home">
+        <main>
+          <h1><span>Working to
+              <mark>build</mark> a</span><span>better future one</span><span>line of <mark>code</mark></span><span>at a time</span></h1>
+          <div class="p"><span>caleb.a.collar@gmail.com</span><span>(+1) 920 851 6700</span></div>
+          <div class="links">
+            <a class="link color-yellow" href="#" title="View my project list" target="_blank">View my bucket list</a>
+            <a class="link color-green" href="mailto:caleb.a.collar@gmail.com" title="Contract with me" target="_blank">Contract with me</a>
+            <a class="link color-red" href="#" title="Download my résumé" target="_blank">Download my résumé</a>
+          </div>
+        </main>
+        <footer>
+          <div class="links">
+            <a class="link small alt color-blue" href="https://twitter.com/caleb_collar" title="Twitter" target="_blank">Twitter</a>
+            <a class="link small alt" href="https://github.com/Mindstormer-0" title="GitHub" target="_blank">GitHub</a></div>
+        </footer>
+      </div>
+      <div class="loading" id="identity" title="Identity">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <a class="loading" id="signature" href="#" title="Go to home" target="_blank"></a>
     </div>
-    <p align="center">Caleb A. Collar | he/him<br>
-      <a href="mailto:ccollar@carthage.edu">ccollar@carthage.edu</a> | <a
-        href="mailto:caleb.a.collar@gmail.com">caleb.a.collar@gmail.com</a><br>
-      920.851.6700
-    </p>
-    <h2 id="education">Education:</h2>
-    <h3 id="carthage-college--aug.-2019---dec.-2022--gpa-3.75--4.0">Carthage College | Aug. 2019 - Dec. 2022 | GPA:
-      3.8 / 4.0</h3>
-    <p>Currently studying for Bachelor of Arts degrees in Computer Science and Biology.</p>
-    <h2 id="in-situ-experience">In-Situ Experience:</h2>
-    <p>Summer Undergraduate Research Experience | Summer 2022</p>
-    <ul>
-      <li>
-        <p>In progress with NASA in Wisconsin (WSGC).</p>
-      </li>
-      <li>
-        <p>Summary:</p>
-      </li>
-    </ul>
-    <blockquote>
-      <p>Building software deployment workflows for a 3U CubeSat. Technical work with writing hardware driver code in C++ to communicate with an ARM OBC on the satellite.</p>
-    </blockquote>
-    <div class="imageContainer">
-      <img src="https://github.com/Mindstormer-0/Mindstormer-0/blob/main/images/CaNOP_Dev_Flow-2.png?raw=true" alt="CaNOP_Workflow">
-    </div>
-    <p>Summer Undergraduate Research Experience | Summer 2020</p>
-    <ul>
-      <li>
-        <p>Worked closely with Dr. Andrew Funk in a bioinformatics related study.</p>
-      </li>
-      <li>
-        <p>Summary:</p>
-      </li>
-    </ul>
-    <blockquote>
-      <p>Assessed resistance gene variation in whole populations of <em>Beta vulgaris</em> using a metagenome-like
-        assembly strategy and nucleotide-based resistance gene modeling.</p>
-    </blockquote>
-    <ul>
-      <li>Extensive use of bash scripting, Python, and R. Data computation on high performance compute clusters,
-        implimentation of open source genomics tools and packages.</li>
-    </ul>
-    <div class="imageContainer">
-      <img src="https://github.com/Mindstormer-0/Mindstormer-0/blob/main/images/SURE.png?raw=true" alt="sure_poster">
-    </div>
-    <h2 id="technical-skills">Technical Skills:</h2>
-    <ul>
-      <li>
-        <p>Strong competency in C, C++, &amp; Java.</p>
-      </li>
-      <li>
-        <p>Familiarity in C#, Kotlin, Python, JavaScript, &amp; R.</p>
-      </li>
-      <li>
-        <p>Competency with SBCs, embedded systems, and microcontrollers.</p>
-      </li>
-      <li>
-        <p>Competency with Windows, Linux and other unix like operating systems.</p>
-      </li>
-      <li>
-        <p>Experience with word and spreadsheet processing software such as Microsoft Excel and Word.</p>
-      </li>
-      <li>
-        <p>Experience with the agile workflow and sprints.</p>
-      </li>
-      <li>
-        <p>Understanding of common software design patterns such as observer, strategy, state, visitor, & proxy.</p>
-      </li>
-      <li>
-        <p>Understandings of the major systems of the human body and their anatomy.</p>
-      </li>
-      <li>
-        <p>Chemistry and biology lab experience and equipment competency.</p>
-      </li>
-      <li>
-        <p>Experience with basic molecular biology and pathways.</p>
-      </li>
-    </ul>
-    <h2 id="relevant-academic-projects">Relevant academic & personal projects:</h2>
-    <p>Academic projects demonstrating implementations of concepts related to computer science and/or biology.</p>
-    <ul>
-      <li>
-        <p><a href="https://groovy-gorilla-games.github.io/Detendu.io/">Détendu.io | A VR experience</a></p>
-      </li>
-      <li>
-        <p><a href="https://tinyurl.com/Quick-File">Lightweight LAN FTP tool with GUI</a></p>
-      </li>
-      <li>
-        <p><a href="https://github.com/Mindstormer-0/aquatic-ecological-proposal">Chemotaxis Based Aquatic Ecological
-            Research Robot (Proposal)</a></p>
-      </li>
-      <li>
-        <p><a href="https://tinyurl.com/apollo-music-player">Agile Team Developed Media Player</a></p>
-      </li>
-      <li>
-        <p><a href="https://tinyurl.com/stack-position">Changing Stack Location in an OS</a></p>
-      </li>
-      <li>
-        <p><a href="https://tinyurl.com/icon-editor-gui">Bitmap Icon Editor</a></p>
-      </li>
-      <li>
-        <p><a href="https://tinyurl.com/mutex-threads">Mutex &amp; Threads</a></p>
-      </li>
-      <li>
-        <p><a href="https://tinyurl.com/motif-sniffer">Bioinformatics Motif Sniffer</a></p>
-      </li>
-    </ul>
-    <h2 id="relevant-classes:">Relevant Classes</h2>
-
-    <h3 align="center" id="biology">Biology:</h3>
-    <table align="center">
-      <thead>
-        <tr>
-          <th>Course</th>
-          <th>Credits Earned</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Chemistry I &amp; II</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Physics I &amp; II</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Organic Chemistry I &amp; II</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Botany</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Genetics</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Human Anatomy &amp; Human Physiology</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Developmental Psychology</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Molecules, Cells, and Organisms</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Vertebrate Ecology</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Microbiology</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Phage Hunters I &amp; II</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Independent Study in Biology - Bioinformatics Comp Approaches</td>
-          <td>4</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <br><br>
-
-    <h3 align="center" id="computer-science">Computer Science:</h3>
-    <table align="center">
-      <thead>
-        <tr>
-          <th>Course</th>
-          <th>Credits Earned</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Principles of Computer Science I &amp; II</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Data Structures and Algorithms</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Calculus I</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Discrete Structures</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Agile Software Development</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Topics in Game Development</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Game Development I</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Object-Oriented Programming</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Operating Systems</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Computer Organization</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Software Security</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Software Design and Development</td>
-          <td>4</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <br>
-
-    <h2 id="aspirations">Aspirations:</h2>
-    <blockquote>
-      <p>I have a passion for the confluence of software, hardware, and biology. I believe that we can create a better
-        future for humanity by being intentional with our decisions (large and small) and by being purposeful with what
-        we build.</p>
-    </blockquote>
-    <blockquote>
-      <p>I am inspired to find creative solutions to complex problems, always learning, working as a team, and
-        exemplifying gracious professionalism.</p>
-    </blockquote>
-    <blockquote>
-      <p>I ultimately want to work as a software developer, not limited to bioinformatics; and to find ways to improve
-        the quality of life for my fellow human beings.</p>
-    </blockquote>
-
-    <br>
-
-    <h2 id="referees...">Referees…</h2>
-    <p>References will be made available upon request.</p>
   </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script src='//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'></script>
+  <script src="./script.js"></script>
+
 </body>
-
-<div align="center">
-  <a href="https://github.com/Mindstormer-0"><img class="glow" width="35"
-      src="https://img.icons8.com/ios-filled/100/000000/github.png"></a>
-  <a href="https://twitter.com/caleb_collar"><img class="glow" width="35"
-      src="https://img.icons8.com/android/100/000000/twitter.png"></a>
-  <a href="https://dev.to/mindstormer"><img class="glow" width="35"
-      src="https://img.icons8.com/windows/100/000000/dev.png"></a>
-</div>
-<div class="container">
-  <div class="button-big">
-    <input type="checkbox" id="checked" class="click">
-    <label id="hyperButton" for="checked">
-      <div class="button-small"></div>
-    </label>
-    <div class="button-small-logo"></div>
-    <div id="circleBg" class="bg"></div>
-  </div>
-</div>
-<br>
-
-<script src="./script.js"></script>
 
 </html>
