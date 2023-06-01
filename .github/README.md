@@ -29,8 +29,6 @@ Check out my repos ⬇️
 </p>
 <br>
 
-![visitor_badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=Mindstormer-0.Mindstormer-0&style=for-the-badge&color=c34a00&lcolor=3f352b&text=Visitors_🤠)
-
 <!--
 Thanks for visiting! 👋🤠
 -->
