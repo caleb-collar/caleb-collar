@@ -5,7 +5,8 @@
 <p align="center">
   <img width="250" src="https://github.com/Mindstormer-0/Mindstormer-0/blob/main/images/caleb_pixel4.png?raw=true">
 </p>
-<h4 align="center"><samp>View my <a href="https://mindstormer-0.github.io/Mindstormer-0/">curriculum vitae.</a></samp></h4>
+<h4 align="center"><samp>View my <a href="https://calebcollar.dev/cv.html">curriculum vitae </a></samp></h4>
+<h4 align="center"><samp>or stop by <a href="https://calebcollar.dev">my website</a>.</samp></h4>
 <br>
 <br>
 <p align="center"><samp>
