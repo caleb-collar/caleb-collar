@@ -16,9 +16,9 @@ If you've found any of my work useful and would like to support it, you can <a h
 <br>
 <br>
 <p align="center">
-<a href= "https://dev.to/mindstormer"><img width="35" src="https://img.icons8.com/windows/32/000000/dev.png"/></a>
+<!-- <a href= "https://dev.to/mindstormer"><img width="35" src="https://img.icons8.com/windows/32/000000/dev.png"/></a>
 <a href= "https://twitter.com/caleb_collar"><img width="35" src="https://img.icons8.com/android/24/000000/twitter.png"/></a>
-<a href= "https://give.catf.us/give/329616/#!/donation/checkout"><img width="35" src="https://img.icons8.com/ios-glyphs/30/000000/planet.png"/></a>
+<a href= "https://give.catf.us/give/329616/#!/donation/checkout"><img width="35" src="https://img.icons8.com/ios-glyphs/30/000000/planet.png"/></a> -->
 </p>
 <br>
 <p align="center">
